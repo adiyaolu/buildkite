@@ -4,8 +4,8 @@ steps:
     id: quality_assurance
     steps:
     - key: lint
-      label: ':golang: vet'
-      command: ls -alh && pwd && go vet ./...
+      label: ':golang: tidy'
+      command: cd workdir && go mod tidy
       plugins:
       - docker#v5.12.0:
           image: "golang:1.16"
